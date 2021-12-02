@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>ML Project</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/models.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form action="{{url_for('predict')}}" method="POST">
+        
+        <img class="row" src="https://i.kym-cdn.com/photos/images/original/001/166/361/803.png">
+        
+        {% if not is_pred %}
+
+            <div class="left-col">
+                
+                <span class="blueTop"> {{ form.Age.label }} &nbsp;&nbsp;&nbsp; {{ form.Age }} </span>
+                <span class="blueJG"> {{ form.Gender.label }} &nbsp;&nbsp;&nbsp; {{ form.Gender }}</span>
+                <span class="blueMid"> {{ form.chestPain.label }} &nbsp;&nbsp;&nbsp; {{ form.chestPain }} </span>
+                <span class="blueAD"> {{ form.RestingBP.label }} &nbsp;&nbsp;&nbsp; {{ form.RestingBP }} </span>
+                <span class="blueSup"> {{ form.Cholesterol.label }} &nbsp;&nbsp;&nbsp; {{ form.Cholesterol }} </span>
+            
+            </div>
+
+            <div class="right-col">
+
+                <span class="redTop"> {{ form.FastingBS.label }} &nbsp;&nbsp;&nbsp; {{ form.FastingBS }} </span>
+                <span class="redJG"> {{ form.RestingECG.label }} &nbsp;&nbsp;&nbsp; {{ form.RestingECG }} </span>
+                <span class="redMid"> {{ form.MaxHR.label }} &nbsp;&nbsp;&nbsp; {{ form.MaxHR }} </span>
+                <span class="redAD"> {{ form.ExerciseAngina.label }} &nbsp;&nbsp;&nbsp; {{ form.ExerciseAngina }} </span>
+                <span class="redSup"> {{ form.Oldpeak.label }} &nbsp;&nbsp;&nbsp; {{ form.Oldpeak }} </span>
+
+                                
+                <span class="rkills"> {{ form.ST_Slope.label }} &nbsp;&nbsp;&nbsp; {{ form.ST_Slope }} </span>
+
+            </div>
+        {% endif %}
+            {% if is_pred %}
+            <img src="../static/styles/assets/lolbutton.png" class="lolbutton">
+            <div class="result"> {{prediction_text}} </div>
+            {% endif %}
+
+            {% if not is_pred %}
+            <button type="submit" class="btnmain" style="font-size: 25px;">Predict!</button>
+            {% endif %}
+        
+    </form>
+    {% if is_pred %}
+    <form action="{{url_for('home')}}" method="POST">
+            {% if is_pred %}
+            <button type="submit" class="btnmain" style="font-size: 25px;">Go back!</button>
+            {% endif %}
+    </form>
+    {% endif %}
+</body>
+</html>

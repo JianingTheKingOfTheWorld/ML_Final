@@ -1,0 +1,239 @@
+body {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
+
+#container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0 auto;
+}
+
+.bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 0
+}
+
+.row {
+    height: 120vh;
+    width: 101%;
+    background-size: cover; 
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* .bg {
+    height: 100vh;
+    width: 100%;
+    background-image: url("assets/mainbackground.png");
+    background-size: cover;
+    box-sizing: border-box;
+    position: absolute;
+} */
+
+/* .col-md-12 {
+    font-style: italic;
+    text-align: center;
+    font-size: x-large;
+} */
+
+.input {
+    width: 50%;
+    column-count: 2;
+}
+
+.btn {
+    margin: 0;
+    position: absolute;
+    width: 200;
+    height: 50;
+    top: -200%;
+    left: 84.1%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.left-col {
+    width: 50%;
+    float: left;
+    padding-left: 300px;
+}
+
+.right-col {
+    width: 50%;
+    float: left;
+    padding-left: 150px;
+}
+
+.redTop {
+    position: absolute;
+    top: 14.5%;
+    left: 6%;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.redJG {
+    position: absolute;
+    top: 30.5%;
+    left: 6%;
+    color: rgb(3, 3, 3);
+    font-size: 25px;
+}
+
+.redMid {
+    position: absolute;
+    top: 43%;
+    left: 6%;
+    color: rgb(8, 8, 8);
+    font-size: 25px;
+}
+
+.redAD {
+    position: absolute;
+    top: 57%;
+    left: 6%;
+    color: rgb(8, 8, 8);
+    font-size: 25px;
+}
+
+.redSup {
+    position: absolute;
+    top: 70%;
+    left: 6%;
+    color: rgb(11, 11, 12);
+    font-size: 25px;
+}
+
+.blueTop {
+    position: absolute;
+    top: 14.5%;
+    right: 8%;
+    color: rgb(13, 13, 14);
+    font-size: 25px;
+}
+
+.blueJG {
+    position: absolute;
+    top: 29%;
+    right: 8%;
+    color: rgb(10, 11, 12);
+    font-size: 25px;
+}
+
+.blueMid {
+    position: absolute;
+    top: 42.5%;
+    right: 8%;
+    color: rgb(3, 3, 3);
+    font-size: 25px;
+}
+
+.blueAD {
+    position: absolute;
+    top: 56%;
+    right: 8%;
+    color: rgb(9, 10, 10);
+    font-size: 25px;
+}
+
+.blueSup {
+    position: absolute;
+    top: 69%;
+    right: 8%;
+    color: rgb(11, 11, 12);
+    font-size: 25px;
+}
+
+.rKills {
+    position: absolute;
+    top: 85%;
+    left: 6%;
+    color: rgb(6, 7, 7);
+    font-size: 25px;
+}
+
+.rDragons {
+    position: absolute;
+    top: 90%;
+    left: 6%;
+    color: rgb(5, 5, 5);
+    font-size: 25px;
+}
+
+.rHeralds {
+    position: absolute;
+    top: 95%;
+    left: 6%;
+    color: rgb(2, 2, 2);
+}
+
+.rTowers {
+    position: absolute;
+    top: 100%;
+    left: 6%;
+    color: rgb(3, 3, 3);
+}
+
+.golddiff {
+    position: absolute;
+    top: 105%;
+    left: 6%;
+    color: rgb(5, 5, 5);
+}
+
+html, body {
+        overscroll-behavior: none;
+    }
+
+.lolbutton {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    left: 30%;
+    width: 40%;
+    top: 50%;
+    height: 20%;
+}
+
+.result {
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    top: 52%;
+    left: 30%;
+    color: aliceblue;
+    z-index: 2;
+    width: 40%;
+}
+
+.label {
+    color: rgb(255, 255, 255);
+}
+
+.btnmain {
+    background-color: black;
+    border-color: #725626;
+    border-width: 10px;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    left: 41.35%;
+    width: 16%;
+    top: 95%;
+    height: 10%;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ML Project</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='static/styles/index.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-image: url('https://i.pinimg.com/originals/1e/b4/53/1eb453f7dc3ea9ff151cc9c3e0ab0288.jpg'); background-size: cover; background-attachment: fixed; background-repeat: no-repeat;">
+        <h1 style="font-size: 60px; color: white; text-align: center; padding-top: 10%; font-family: sans-serif;">ML Project - prediciting heart attack</h1>
+
+        <p style="font-size: 40px; color: white; text-align: center; padding-top: 5%; font-family: sans-serif;">
+            Team members: Jianing Xu, Tianyu Yang, Aarushi Vijay
+        </p>
+        <div style="position: relative; top: 50%; left: 40%; padding-top: 10%;">
+            <form action="{{url_for('Model1')}}">
+                <button class='model1button' type="submit" style="background-color: black; border-color: violet; height: 75px; width: 300px;">
+                    <div style="position: relative; text-align: center; color: white; z-index: 2; font-size: 30px;"> Bagging model</div>
+            </form>
+    
+        </div>
+    </body>
+</html>
